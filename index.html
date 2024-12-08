@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duty Roster</title>
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"></script>
+
+    <style>
+        .animated-table {
+            width: 50%;
+            margin: 0 auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        th, td { 
+            font-size: 1.5rem; 
+            padding: 20px; 
+            text-align: center; 
+        }
+
+        th { 
+            background-color: rgba(255, 255, 255, 0.8); 
+        }
+
+        tr:nth-child(even) td { 
+            background-color: rgba(255, 255, 255, 0.7); 
+        }
+
+        tr:nth-child(odd) td { 
+            background-color: rgba(255, 255, 255, 0.9); 
+        }
+
+        /* Full-screen video background */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500 py-10">
+    <!-- Background Video -->
+    <video class="video-background" autoplay muted loop>
+        <source src="https://motionbgs.com/media/5600/blue-code-rain.960x540.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Audio Alarm -->
+    <audio id="alarm-sound" src="https://youtu.be/dKOczoWTe74?si=ls3YH5C6NlFRTly3" preload="auto"></audio>
+
+    <div class="container mx-auto px-4">
+        <h1 class="text-5xl font-bold text-center mb-8 text-white">Duty Roster</h1>
+
+        <table class="animated-table">
+            <thead>
+                <tr class="bg-gray-200">
+                    <th>Day</th>
+                    <th>Israel</th>
+                    <th>Wicki</th>
+                    <th>Degrace</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Monday</td><td>Utensils</td><td>Mopping</td><td>Toilet</td></tr>
+                <tr><td>Tuesday</td><td>Mopping</td><td>Toilet</td><td>Utensils</td></tr>
+                <tr><td>Wednesday</td><td>Toilet</td><td>Utensils</td><td>Mopping</td></tr>
+                <tr><td>Thursday</td><td>Mopping</td><td>Toilet</td><td>Utensils</td></tr>
+                <tr><td>Friday</td><td>Toilet</td><td>Utensils</td><td>Mopping</td></tr>
+                <tr><td>Saturday</td><td>Utensils</td><td>Mopping</td><td>Toilet</td></tr>
+                <tr class="bg-gray-100"><td>Sunday</td><td>Toilet</td><td>Utensils</td><td>Mopping</td></tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
